@@ -6,6 +6,8 @@ import 'package:http/http.dart' as http;
 import 'package:fluttertoast/fluttertoast.dart';
 import 'dart:convert';
 
+import 'package:woofle/root/root_app.dart';
+
 class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);
 
@@ -29,7 +31,7 @@ class LoginScreen extends StatelessWidget {
         fontSize: 16,
       );
 
-      //Navigator.push(context, MaterialPageRoute(builder: (context) => SwipePage()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const RootPage()));
     } else {
       Fluttertoast.showToast(
         msg: data,
