@@ -10,11 +10,15 @@ final List data = [
   },
   {
     'color': Colors.green,
-    'linki': 'images/dog3.jpg',
+    'linki': 'images/dog2.jpg',
   },
   {
     'color': Colors.blue,
-    'linki': 'images/dog2.jpg',
+    'linki': 'images/dog3.jpg',
+  },
+  {
+    'color': Colors.white,
+    'linki': 'images/dog4.jpg',
   }
 ];
 
@@ -27,13 +31,13 @@ class _TinderState extends State<Tinder> {
   // Dynamically load cards from database
   List<Card> cards = [
     Card(
-      data[0]['color'],
+      data[0]['linki'],
     ),
     Card(
-      data[1]['color'],
+      data[1]['linki'],
     ),
     Card(
-      data[2]['color'],
+      data[2]['linki'],
     ),
   ];
 
@@ -54,8 +58,8 @@ class _TinderState extends State<Tinder> {
 class Card extends StatelessWidget {
   // Made to distinguish cards
   // Add your own applicable data here
-  final Color color;
-  Card(this.color);
+  String linki = '';
+  Card(this.linki);
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +71,7 @@ class Card extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16.0),
           ),
-          child: Image.asset('images/dog1.jpg',
+          child: Image.asset(linki,
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
               fit: BoxFit.cover),
