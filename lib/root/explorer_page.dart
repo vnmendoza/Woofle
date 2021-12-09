@@ -5,20 +5,64 @@ import '../constants.dart';
 // Link to DB
 final List data = [
   {
-    'color': Colors.red,
+    'name': 'Shawn',
     'linki': 'images/dog1.jpg',
   },
   {
-    'color': Colors.green,
+    'name': 'Kevin',
     'linki': 'images/dog2.jpg',
   },
   {
-    'color': Colors.blue,
+    'name': 'Tron',
     'linki': 'images/dog3.jpg',
   },
   {
-    'color': Colors.white,
+    'name': 'Candy',
     'linki': 'images/dog4.jpg',
+  },
+  {
+    'name': 'Cindy',
+    'linki': 'images/dog5.jpg',
+  },
+  {
+    'name': 'Dough',
+    'linki': 'images/dog6.jpg',
+  },
+  {
+    'name': 'Bon',
+    'linki': 'images/dog7.jpg',
+  },
+  {
+    'name': 'Den',
+    'linki': 'images/dog8.jpg',
+  },
+  {
+    'name': 'Sam',
+    'linki': 'images/dog9.jpg',
+  },
+  {
+    'name': 'Danny',
+    'linki': 'images/dog10.jpg',
+  },
+  {
+    'name': 'Ben',
+    'linki': 'images/dog11.jpg',
+  },
+  {
+    'name': 'Sans',
+    'linki': 'images/dog12.jpg',
+  },
+  {
+    'name': 'Sam',
+    'linki': 'images/dog13.jpg',
+  },
+  {
+    'name': 'Lis',
+    'linki': 'images/dog14.jpg',
+  },
+  {
+    'name': 'Jenny',
+    'linki': 'images/dog15.jpg',
   }
 ];
 
@@ -39,6 +83,42 @@ class _TinderState extends State<Tinder> {
     Card(
       data[2]['linki'],
     ),
+    Card(
+      data[3]['linki'],
+    ),
+    Card(
+      data[4]['linki'],
+    ),
+    Card(
+      data[5]['linki'],
+    ),
+    Card(
+      data[6]['linki'],
+    ),
+    Card(
+      data[7]['linki'],
+    ),
+    Card(
+      data[8]['linki'],
+    ),
+    Card(
+      data[9]['linki'],
+    ),
+    Card(
+      data[10]['linki'],
+    ),
+    Card(
+      data[11]['linki'],
+    ),
+    Card(
+      data[12]['linki'],
+    ),
+    Card(
+      data[13]['linki'],
+    ),
+    Card(
+      data[14]['linki'],
+    )
   ];
 
   @override
