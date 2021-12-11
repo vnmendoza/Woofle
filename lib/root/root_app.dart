@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:woofle/constants.dart';
+import 'package:woofle/root/explorer_page.dart';
 import '../constants.dart';
 
 class RootPage extends StatefulWidget {
@@ -9,15 +10,15 @@ class RootPage extends StatefulWidget {
   _RootPageState createState() => _RootPageState();
 }
 
-class _RootPageState extends State<RootPage>{
+class _RootPageState extends State<RootPage> {
   int pageIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(100),
-      child: getAppBar(),
+        child: getAppBar(),
       ),
       body: getBody(),
     );
@@ -26,41 +27,42 @@ class _RootPageState extends State<RootPage>{
   Widget getBody() {
     return IndexedStack(
       index: pageIndex,
-      children: [/*ExplorePage(), LikesPage(), ChatPage(), AccountPage()*/],
-    );
+      children: [Tinder()],
+    ); //IndexedStack
   } //getBody
+
   Widget getAppBar() {
     List bottomItems = [
-      pageIndex == 0 ? Icons.recent_actors: Icons.recent_actors_outlined,
+      pageIndex == 0 ? Icons.recent_actors : Icons.recent_actors_outlined,
       pageIndex == 1 ? Icons.favorite : Icons.favorite_border,
       pageIndex == 2 ? Icons.textsms : Icons.textsms_outlined,
-      pageIndex == 3 ? Icons.settings_applications : Icons.settings_applications_outlined,
+      pageIndex == 3
+          ? Icons.settings_applications
+          : Icons.settings_applications_outlined,
     ];
     return AppBar(
-      backgroundColor: Colors.white,
+      backgroundColor: primaryPastelColor,
       elevation: 0,
       title: Padding(
-        padding: const EdgeInsets.only(left: 10, right:10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: List.generate(bottomItems.length, (index) {
-            return IconButton(
-              onPressed: () {
-                setState(() {
-                  pageIndex = index;
-                }); //setState
-              },
-              icon: Icon(
-                //Icons.person,
-                bottomItems[index],
-                color: primaryColor,
-              ),
-            );
-          }),
-        )
-      ),
+          padding: const EdgeInsets.only(left: 10, right: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: List.generate(bottomItems.length, (index) {
+              return IconButton(
+                onPressed: () {
+                  setState(() {
+                    pageIndex = index;
+                  }); //setState
+                },
+                icon: Icon(
+                  //Icons.person,
+                  bottomItems[index],
+                  color: primaryColor,
+                ),
+              );
+            }),
+          )),
     ); //return AppBar
   } //getAppBar
 
 } //_RootPageState
-

@@ -16,7 +16,7 @@ class LoginScreen extends StatelessWidget {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   Future login(BuildContext context) async {
-    var url = Uri.parse("http://10.0.2.2/woofle/login.php");
+    var url = Uri.parse("http://192.168.64.2/woofle/login.php");
     var response = await http.post(url, body: {
       "username": username.text,
       "password": password.text,
@@ -31,7 +31,8 @@ class LoginScreen extends StatelessWidget {
         fontSize: 16,
       );
 
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const RootPage()));
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const RootPage()));
     } else {
       Fluttertoast.showToast(
         msg: data,
@@ -143,20 +144,20 @@ class LoginScreen extends StatelessWidget {
                                   style: TextStyle(color: primaryColor),
                                 ),
                                 GestureDetector(
-                                onTap: () {
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                                    return SignUpScreen();
-                                  }));
-                                },
-                                child: const Text(
-                                  " Sign Up",
-                                  style: TextStyle(
-                                    color: primaryColor,
-                                    fontWeight: FontWeight.bold,
+                                  onTap: () {
+                                    Navigator.push(context,
+                                        MaterialPageRoute(builder: (context) {
+                                      return SignUpScreen();
+                                    }));
+                                  },
+                                  child: const Text(
+                                    " Sign Up",
+                                    style: TextStyle(
+                                      color: primaryColor,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
-                                ),
-
                               ],
                             ),
                           )
