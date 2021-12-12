@@ -102,6 +102,7 @@ class Card extends StatelessWidget {
   String linki = '';
   var name;
 
+
   Card(this.linki, this.name);
 
   @override
