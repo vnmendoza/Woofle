@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:woofle/Chat/AllChat.dart';
+import 'package:woofle/root/all_chat.dart';
 import 'package:woofle/constants.dart';
 import 'package:woofle/root/explorer_page.dart';
 import '../constants.dart';
+import 'account_page.dart';
 
 class RootPage extends StatefulWidget {
   const RootPage({Key? key}) : super(key: key);
@@ -28,7 +29,7 @@ class _RootPageState extends State<RootPage> {
   Widget getBody() {
     return IndexedStack(
       index: pageIndex,
-      children: [Tinder(),AllChat()],
+      children: [Tinder(),AllChat(),AccountPage(),],
     ); //IndexedStack
   } //getBody
 
