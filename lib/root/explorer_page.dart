@@ -1,70 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swipable/flutter_swipable.dart';
+import 'package:woofle/Components/likes_json.dart';
 import '../constants.dart';
+import '../Components/user_cards.dart';
 
 // Link to DB
-final List data = [
-  {
-    'name': 'Shawn',
-    'linki': 'images/dog1.jpg',
-  },
-  {
-    'name': 'Kevin',
-    'linki': 'images/dog2.jpg',
-  },
-  {
-    'name': 'Tron',
-    'linki': 'images/dog3.jpg',
-  },
-  {
-    'name': 'Candy',
-    'linki': 'images/dog4.jpg',
-  },
-  {
-    'name': 'Cindy',
-    'linki': 'images/dog5.jpg',
-  },
-  {
-    'name': 'Dough',
-    'linki': 'images/dog6.jpg',
-  },
-  {
-    'name': 'Bon',
-    'linki': 'images/dog7.jpg',
-  },
-  {
-    'name': 'Den',
-    'linki': 'images/dog8.jpg',
-  },
-  {
-    'name': 'Sam',
-    'linki': 'images/dog9.jpg',
-  },
-  {
-    'name': 'Danny',
-    'linki': 'images/dog10.jpg',
-  },
-  {
-    'name': 'Ben',
-    'linki': 'images/dog11.jpg',
-  },
-  {
-    'name': 'Sans',
-    'linki': 'images/dog12.jpg',
-  },
-  {
-    'name': 'Sam',
-    'linki': 'images/dog13.jpg',
-  },
-  {
-    'name': 'Lis',
-    'linki': 'images/dog14.jpg',
-  },
-  {
-    'name': 'Jenny',
-    'linki': 'images/dog15.jpg',
-  }
-];
 
 class Tinder extends StatefulWidget {
   @override
@@ -140,8 +80,14 @@ class _TinderState extends State<Tinder> {
   Widget build(BuildContext context) {
     // Stack of cards that can be swiped. Set width, height, etc here.
     return Container(
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
+      width: MediaQuery
+          .of(context)
+          .size
+          .width,
+      height: MediaQuery
+          .of(context)
+          .size
+          .height,
       // Important to keep as a stack to have overlay of cards.
       child: Stack(
         children: cards,
@@ -155,6 +101,8 @@ class Card extends StatelessWidget {
   // Add your own applicable data here
   String linki = '';
   var name;
+
+
   Card(this.linki, this.name);
 
   @override
@@ -164,14 +112,17 @@ class Card extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.all(16.0),
         child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16.0),
-          ),
           child: Stack(
             children: [
               Image.asset(linki,
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height,
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width,
+                  height: MediaQuery
+                      .of(context)
+                      .size
+                      .height,
                   fit: BoxFit.cover),
               Text('$name',
                   style: TextStyle(color: Colors.white, fontSize: 60)),
@@ -179,7 +130,9 @@ class Card extends StatelessWidget {
           ),
         ),
       ),
-      // onSwipeRight, left, up, down, cancel, etc...
+      onSwipeRight: (finalPosition) {
+        likesJson.add({'name': name, 'liki': linki});
+      }, // onSwipeRight, left, up, down, cancel, etc...
     );
   }
 }
