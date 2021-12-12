@@ -27,7 +27,7 @@ class _RootPageState extends State<RootPage> {
   Widget getBody() {
     return IndexedStack(
       index: pageIndex,
-      children: [Tinder()],
+      children: [Tinder(),/*ChatPage()*/],
     ); //IndexedStack
   } //getBody
 
