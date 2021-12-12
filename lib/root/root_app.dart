@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:woofle/Chat/AllChat.dart';
 import 'package:woofle/constants.dart';
 import 'package:woofle/root/explorer_page.dart';
 import '../constants.dart';
@@ -27,7 +28,7 @@ class _RootPageState extends State<RootPage> {
   Widget getBody() {
     return IndexedStack(
       index: pageIndex,
-      children: [Tinder()],
+      children: [Tinder(),AllChat()],
     ); //IndexedStack
   } //getBody
 

@@ -14,7 +14,7 @@ class SignUpScreen extends StatelessWidget {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   Future signup(BuildContext context) async {
-    var url = Uri.parse("http://192.168.64.2/woofle/signup.php");
+    var url = Uri.parse("http://10.0.0.2/woofle/signup.php");
     var response = await http.post(url, body: {
       "username": username.text,
       "password": password.text,
