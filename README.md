@@ -31,7 +31,7 @@ You can find instructions on how to download android studio [here](https://docs.
   
 5. When your android emulator is running, you can now run the main.dart file in the Woofle package.
     ### If you're having trouble with any of the package dependencies:
-    - open the android studio intergrade terminal and type in the command:  
+    - Open the android studio intergraded terminal and type in the commands:  
         > flutter clean  
         > flutter pub get
-    - If everything is running correctly then you should have the Woofle app running on your android emulator
+    - If everything is running correctly then you should have the Woofle app running on your android emulator.
