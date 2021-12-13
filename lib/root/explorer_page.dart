@@ -15,64 +15,64 @@ class _TinderState extends State<Tinder> {
   // Dynamically load cards from database
   List<Card> cards = [
     Card(
-      data[0]['linki'],
-      data[0]['name'],
+      userData[0]['linki'],
+      userData[0]['name'],
     ),
     Card(
-      data[1]['linki'],
-      data[1]['name'],
+      userData[1]['linki'],
+      userData[1]['name'],
     ),
     Card(
-      data[2]['linki'],
-      data[2]['name'],
+      userData[2]['linki'],
+      userData[2]['name'],
     ),
     Card(
-      data[3]['linki'],
-      data[3]['name'],
+      userData[3]['linki'],
+      userData[3]['name'],
     ),
     Card(
-      data[4]['linki'],
-      data[4]['name'],
+      userData[4]['linki'],
+      userData[4]['name'],
     ),
     Card(
-      data[5]['linki'],
-      data[5]['name'],
+      userData[5]['linki'],
+      userData[5]['name'],
     ),
     Card(
-      data[6]['linki'],
-      data[6]['name'],
+      userData[6]['linki'],
+      userData[6]['name'],
     ),
     Card(
-      data[7]['linki'],
-      data[7]['name'],
+      userData[7]['linki'],
+      userData[7]['name'],
     ),
     Card(
-      data[8]['linki'],
-      data[8]['name'],
+      userData[8]['linki'],
+      userData[8]['name'],
     ),
     Card(
-      data[9]['linki'],
-      data[9]['name'],
+      userData[9]['linki'],
+      userData[9]['name'],
     ),
     Card(
-      data[10]['linki'],
-      data[10]['name'],
+      userData[10]['linki'],
+      userData[10]['name'],
     ),
     Card(
-      data[11]['linki'],
-      data[11]['name'],
+      userData[11]['linki'],
+      userData[11]['name'],
     ),
     Card(
-      data[12]['linki'],
-      data[12]['name'],
+      userData[12]['linki'],
+      userData[12]['name'],
     ),
     Card(
-      data[13]['linki'],
-      data[13]['name'],
+      userData[13]['linki'],
+      userData[13]['name'],
     ),
     Card(
-      data[14]['linki'],
-      data[14]['name'],
+      userData[14]['linki'],
+      userData[14]['name'],
     )
   ];
 
