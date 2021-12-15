@@ -11,10 +11,13 @@ class SignUpScreen extends StatelessWidget {
 
   final TextEditingController username = TextEditingController();
   final TextEditingController password = TextEditingController();
+  //the formstate is in charge of the login boxes
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
+  // connects to database via the php file and adds user.
   Future signup(BuildContext context) async {
-    var url = Uri.parse("http://10.0.0.2/woofle/signup.php");
+    //Fluttertoast.showToast(msg: "insideSignUp");
+    var url = Uri.parse("http://10.0.2.2/woofle/signup.php");
     var response = await http.post(url, body: {
       "username": username.text,
       "password": password.text,
@@ -22,6 +25,7 @@ class SignUpScreen extends StatelessWidget {
 
     var data = jsonDecode(response.body);
     if (data == "true") {
+      //a toast will be a little message box at the bottom of app
       Fluttertoast.showToast(
         msg: "Signed Up",
         toastLength: Toast.LENGTH_SHORT,
