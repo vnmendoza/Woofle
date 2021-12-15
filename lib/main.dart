@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:woofle/Login/login_page.dart';
-
+// this is a lambda expression to run application
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
