@@ -35,6 +35,8 @@ class _ExplorePageState extends State<ExplorePage>
     );
   }
 
+  // this is the find page body.
+  // this will show the user what other users are trying to match with the
   Widget getBody() {
     var size = MediaQuery.of(context).size;
 

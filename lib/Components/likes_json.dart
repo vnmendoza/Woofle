@@ -1,3 +1,4 @@
+// This links all the likes on the like pages to their photos
 const List likesJson = [
   {"img": "images/dog1.jpg", "active": true},
   {"img": "images/dog2.jpg", "active": false},

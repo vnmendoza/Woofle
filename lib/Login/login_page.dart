@@ -14,7 +14,7 @@ class LoginScreen extends StatelessWidget {
   final TextEditingController username = TextEditingController();
   final TextEditingController password = TextEditingController();
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
-
+// login function that talks to xampp and logs user in
   Future login(BuildContext context) async {
     var url = Uri.parse("http://10.0.2.2/woofle/login.php");
     var response = await http.post(url, body: {
@@ -44,6 +44,7 @@ class LoginScreen extends StatelessWidget {
     }
   }
 
+  // this builds the login page
   @override
   Widget build(BuildContext context) {
     return Scaffold(
