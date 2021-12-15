@@ -11,6 +11,7 @@ class SignUpScreen extends StatelessWidget {
 
   final TextEditingController username = TextEditingController();
   final TextEditingController password = TextEditingController();
+  //the formstate is in charge of the login boxes
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   // connects to database via the php file and adds user.
