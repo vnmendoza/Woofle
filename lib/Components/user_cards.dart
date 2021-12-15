@@ -1,4 +1,4 @@
-final List data = [
+final List userData = [
   {
     'name': 'Shawn',
     'linki': 'images/dog1.jpg',

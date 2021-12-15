@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:woofle/Components/chatStorage.dart';
+import 'package:woofle/Components/chat_storage.dart';
 
 import '../constants.dart';
 
 class AllChat extends StatefulWidget {
+  const AllChat({Key? key}) : super(key: key);
+
   @override
   _AllChatState createState() => _AllChatState();
 }
@@ -26,7 +28,7 @@ class _AllChatState extends State<AllChat> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Text(
+              const Text(
                 "Messages",
                 style: TextStyle(
                     fontSize: 18, fontWeight: FontWeight.bold, color: primaryColor),
@@ -46,10 +48,10 @@ class _AllChatState extends State<AllChat> {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
-        Divider(
+        const Divider(
           thickness: 0.8,
         ),
         Padding(
@@ -71,24 +73,24 @@ class _AllChatState extends State<AllChat> {
             ),
           ),
         ),
-        Divider(
+        const Divider(
           thickness: 0.8,
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 15),
+            const Padding(
+              padding: EdgeInsets.only(left: 15),
               child: Text(
                 "New Matches",
                 style: TextStyle(
                     fontSize: 15, fontWeight: FontWeight.w500, color: primaryColor),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             SingleChildScrollView(
@@ -154,7 +156,7 @@ class _AllChatState extends State<AllChat> {
                                 ],
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             SizedBox(
@@ -171,7 +173,7 @@ class _AllChatState extends State<AllChat> {
                     })),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Padding(
@@ -236,7 +238,7 @@ class _AllChatState extends State<AllChat> {
                             ],
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 20,
                         ),
                         Column(
@@ -244,10 +246,10 @@ class _AllChatState extends State<AllChat> {
                           children: <Widget>[
                             Text(
                               userMessages[index]['name'],
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 17, fontWeight: FontWeight.w500),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 5,
                             ),
                             SizedBox(
