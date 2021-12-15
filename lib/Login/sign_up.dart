@@ -24,6 +24,7 @@ class SignUpScreen extends StatelessWidget {
 
     var data = jsonDecode(response.body);
     if (data == "true") {
+      //a toast will be a little message box at the bottom of app
       Fluttertoast.showToast(
         msg: "Signed Up",
         toastLength: Toast.LENGTH_SHORT,
